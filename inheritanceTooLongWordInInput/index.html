@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    
+    <body>
+        <div  ng-controller="MainController">
+            <input ng-model="myData.val">
+            <h1>{{myData.val}}</h1>
+            <span ng-show="myData.toolong">Name is too long</span>
+<!--
+            <div ng-controller="SubController">
+                <input ng-model="myData.val">
+                <h1>{{myData.val}}</h1>
+            </div>
+-->
+<!--
+            <button ng-click="myData='123'">123</button>
+            <h1>{{myData}}</h1>
+-->
+        </div>
+
+        
+        <script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular.min.js">
+        </script>
+        <script type="text/javascript" src="../app.js"></script>
+
+    </body>
+</html>

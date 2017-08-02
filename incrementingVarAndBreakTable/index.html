@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    
+    <head>
+        <style type="text/css">
+            .orange{
+                color: orange;
+            }
+            
+            .italic{
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <div ng-controller="MainController">
+            <div>Num: {{num}}</div>
+            <div>Nums: {{nums}}</div>
+           <button ng-click = "increment()">increment</button>
+            <button ng-click="breakIt()">break it</button>
+           
+        </div>
+
+        
+        <script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular.min.js">
+        </script>
+        <script type="text/javascript" src="../app.js"></script>
+
+    </body>
+</html>

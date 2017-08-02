@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+    <head>
+        <title>AngularJS - $watch</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    </head>
+<body>
+    <div ng-controller="defaultCtrl">
+        <div class="well">Liczba: {{number}}</div>
+        <div>
+            <a class="btn btn-success" href="#" ng-click="add()"> + </a>
+            <a class="btn btn-danger" href="#" ng-click="dec()"> - </a>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js">
+    </script>
+    <script>
+        var app = angular.module('app', []);
+            app.controller('defaultCtrl', function ($scope) {
+                $scope.number = 1;
+                $scope.$watch('number', function () {
+                    console.log('Liczba: ' + $scope.number);
+                 });
+
+                $scope.add = function () {
+                    $scope.number++;
+                };
+
+                $scope.dec = function () {
+                    $scope.number--;
+                };
+            });
+    </script>
+</body>
+</html>

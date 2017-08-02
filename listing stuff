@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+    <head>
+        <title>Przykład zastosowania dyrektywy ng-repeat</title>
+    </head>
+<body>
+    <div ng-controller="defaultCtrl">
+        <ul>
+            <li ng-repeat="oferta in oferty">
+                <p > Nazwa: {{ oferta.nazwa }} || cena: {{oferta.cena }} </p>
+            </li>
+        </ul>
+    </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"> </script>
+    <script>
+        var app = angular.module('app', []);
+            app.controller('defaultCtrl', function ($scope) {
+                $scope.oferty = [
+                    { nazwa: 'Krzesło', cena: 149.99 },
+                    { nazwa: 'Stolik', cena: 189.99 },
+                    { nazwa: 'Szafka', cena: 205.99 },
+                ];
+            });
+    </script>
+</body>
+</html>
